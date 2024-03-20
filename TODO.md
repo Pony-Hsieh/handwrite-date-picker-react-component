@@ -1,0 +1,13 @@
+- docs: 新增測驗繳交說明
+- feat: 新增 Calender 元件
+- feat: 新增 stylelint 及設定
+- feat: 新增 prettier 及設定
+- feat: 新增 sass
+- refactor: 抽離共用 function
+getDatesOfMonth, getFirstDayOfMonth
+- refactor: 移除用不到的模板內容
+- feat: 新增 editorconfig
+- feat: 新增 auto prefixer 及設定
+- feat: 新增 vs code 設定
+- feat: 更新 eslint 設定
+- feat: 新增 normalize.css
