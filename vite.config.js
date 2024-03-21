@@ -6,7 +6,8 @@ import autoprefixer from 'autoprefixer';
 export default defineConfig({
   plugins: [react()],
   base:
-    import.meta.env.NODE_ENV === 'production'
+    // eslint-disable-next-line
+    process.env.NODE_ENV === 'production'
       ? '/handwrite-date-picker-react-component/'
       : '/',
   css: {
