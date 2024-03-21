@@ -10,5 +10,9 @@ export default defineConfig({
       plugins: [autoprefixer({})],
     },
   },
-  base: '/handwrite-date-picker-react-component/',
+  base:
+    // eslint-disable-next-line
+    process.env.NODE_ENV === 'production'
+      ? '/handwrite-date-picker-react-component/'
+      : '/',
 });
