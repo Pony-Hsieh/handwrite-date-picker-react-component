@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "dayjs": "^1.11.10",
+    "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vite-plugin-require": "^1.1.14"
