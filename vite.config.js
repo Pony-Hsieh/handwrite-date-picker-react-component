@@ -5,10 +5,10 @@ import vitePluginRequire from 'vite-plugin-require';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), vitePluginRequire.default()],
   css: {
     postcss: {
-      plugins: [autoprefixer({}), vitePluginRequire.default()],
+      plugins: [autoprefixer({})],
     },
   },
 });

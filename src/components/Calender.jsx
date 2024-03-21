@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import dayjs from 'dayjs';
+import isBetween from 'dayjs/plugin/isBetween';
 import { getDatesOfMonth, getFirstDayOfMonth } from '../scripts/utils';
 import '../styles/components/Calender.scss';
 
-// eslint-disable-next-line
-const isBetween = require('dayjs/plugin/isBetween');
 dayjs.extend(isBetween);
 
 let clickCounter = 0;
