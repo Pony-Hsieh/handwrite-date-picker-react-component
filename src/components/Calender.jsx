@@ -4,11 +4,10 @@ import isBetween from 'dayjs/plugin/IsBetween';
 import { getDatesOfMonth, getFirstDayOfMonth } from '../scripts/utils';
 import '../styles/components/Calender.scss';
 
-dayjs.extend(isBetween);
-
 let clickCounter = 0;
 
 function Calendar(props) {
+  dayjs.extend(isBetween);
   const { initDate = dayjs(), selectedDates, setSelectedDates } = props;
 
   const [date, setDate] = useState(initDate);
@@ -23,7 +22,7 @@ function Calendar(props) {
 
   const handleSelectedDates = (e) => {
     const choosingDate = dayjs(
-      `${date.year()}-${date.month() + 1}-${e.target.innerText}`
+      `${date.year()}-${date.month() + 1}-${e.target.innerText}`,
     );
 
     if (clickCounter === 0) {
@@ -57,11 +56,11 @@ function Calendar(props) {
     const datesCount = getDatesOfMonth(date.year(), date.month() + 1);
     const firstDayOfThisMonth = getFirstDayOfMonth(
       date.year(),
-      date.month() + 1
+      date.month() + 1,
     );
     const lastDateOfLastMonth = getDatesOfMonth(
       date.subtract(1, 'month').year(),
-      date.subtract(1, 'month').month() + 1
+      date.subtract(1, 'month').month() + 1,
     );
 
     // 這個月所有天數
@@ -90,7 +89,7 @@ function Calendar(props) {
           }}
         >
           {i}
-        </div>
+        </div>,
       );
     }
 
@@ -99,7 +98,7 @@ function Calendar(props) {
       datesArr.unshift(
         <div key={Math.random()} className="date lastMonthDate">
           {lastDateOfLastMonth + 1 - i}
-        </div>
+        </div>,
       );
     }
 
@@ -109,7 +108,7 @@ function Calendar(props) {
       datesArr.push(
         <div key={Math.random()} className="date nextMonthDate">
           {nextMonthDateflag}
-        </div>
+        </div>,
       );
       nextMonthDateflag++;
     }
