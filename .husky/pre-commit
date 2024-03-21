@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "--- start pre-commit git hook ---"
+# -v: show task output even when tasks succeed; by default only failed output is shown
+npx lint-staged -v
+echo "--- end pre-commit git hook ---"

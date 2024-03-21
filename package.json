@@ -7,9 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "eslint-check": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "stylelint": "stylelint **/*.scss --fix",
-    "stylelint2": "npm run stylelint && npm run stylelint",
-    "preview": "vite preview"
+    "stylelint-fix": "stylelint **/*.scss --fix",
+    "stylelint-fix-twice": "npm run stylelint && npm run stylelint",
+    "preview": "vite preview",
+    "prepare": "husky install"
   },
   "dependencies": {
     "dayjs": "^1.11.10",
@@ -27,6 +28,8 @@
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "postcss": "^8.4.37",
     "sass": "^1.72.0",
     "stylelint": "^16.2.1",
