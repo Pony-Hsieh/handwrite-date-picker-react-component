@@ -1,13 +1,17 @@
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
 import { useState } from 'react';
 import dayjs from 'dayjs';
-import isBetween from 'dayjs/plugin/IsBetween';
 import { getDatesOfMonth, getFirstDayOfMonth } from '../scripts/utils';
 import '../styles/components/Calender.scss';
+
+const isBetween = require('dayjs/plugin/isBetween');
+dayjs.extend(isBetween);
 
 let clickCounter = 0;
 
 function Calendar(props) {
-  dayjs.extend(isBetween);
   const { initDate = dayjs(), selectedDates, setSelectedDates } = props;
 
   const [date, setDate] = useState(initDate);
